@@ -192,8 +192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   damage: 1
   attackCooldown: 2
-  range: 6.76
-  colliderDistance: 0.22
+  range: 2.9
+  colliderDistance: 0.19
   boxCollider2D: {fileID: 6046468650319826165}
   playerLayer:
     serializedVersion: 2
@@ -214,3 +214,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   startingHealth: 3
   invincibilityDuration: 1
+  deathAnimationLength: 0.5
+  destroyEnemyOnDeath: 1
+  destroyDelay: 0.5

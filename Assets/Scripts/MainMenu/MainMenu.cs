@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
         // SceneManager.LoadScene("SampleScene");
 
         // Use the LevelManager instead:
-        LevelManager.instance.LoadScene("SampleScene", "CrossFade");
+        LevelManager.instance.LoadScene("Level 1", "CrossFade");
     }
 
     public void QuitGame()

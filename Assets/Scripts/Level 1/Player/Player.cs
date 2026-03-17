@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
+    // Add this for attack origin
+    [Header("Attack")]
+    [SerializeField] private Transform attackOrigin;
+    private Vector3 attackOriginInitialLocalPos;
+
     private Rigidbody2D rb;
     private bool isGrounded;
     private SpriteRenderer spriteRenderer;
@@ -19,6 +24,12 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        // Store the initial local position of attack origin
+        if (attackOrigin != null)
+        {
+            attackOriginInitialLocalPos = attackOrigin.localPosition;
+        }
 
         // Initialize grounded state
         UpdateGroundedState();
@@ -38,14 +49,28 @@ public class Player : MonoBehaviour
         // Movement
         rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
 
-        // Flip character based on movement direction
+        // Flip character based on movement direction AND update attack origin
         if (moveX > 0)
         {
             spriteRenderer.flipX = false;
+            // Update attack origin position when facing right
+            if (attackOrigin != null)
+            {
+                Vector3 newLocalPos = attackOriginInitialLocalPos;
+                newLocalPos.x = Mathf.Abs(attackOriginInitialLocalPos.x);
+                attackOrigin.localPosition = newLocalPos;
+            }
         }
         else if (moveX < 0)
         {
             spriteRenderer.flipX = true;
+            // Update attack origin position when facing left
+            if (attackOrigin != null)
+            {
+                Vector3 newLocalPos = attackOriginInitialLocalPos;
+                newLocalPos.x = -Mathf.Abs(attackOriginInitialLocalPos.x);
+                attackOrigin.localPosition = newLocalPos;
+            }
         }
 
         // Jump

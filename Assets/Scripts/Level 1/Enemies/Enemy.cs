@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Attack Player Settings")]
     [SerializeField] private float damage;
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
@@ -29,9 +30,6 @@ public class Enemy : MonoBehaviour
 
         if (boxCollider2D == null)
             boxCollider2D = GetComponent<BoxCollider2D>();
-
-        if (boxCollider2D == null)
-            Debug.LogWarning("Enemy script requires a BoxCollider2D component on the GameObject!", this);
     }
 
     void Update()
@@ -99,11 +97,6 @@ public class Enemy : MonoBehaviour
         if (boxCollider2D != null && PlayerInSight() && playerHealth != null)
         {
             playerHealth.TakeDamage(damage);
-            //Debug.Log("Player attacked for " + damage + " damage! Player health: " + playerHealth.currentHealth);
-        }
-        else
-        {
-            //Debug.Log("Player not in sight or playerHealth is null");
         }
     }
 
