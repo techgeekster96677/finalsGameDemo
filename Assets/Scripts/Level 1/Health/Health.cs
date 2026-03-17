@@ -47,7 +47,10 @@ public class Health : MonoBehaviour
         {
             //hurt
             if (animator != null)
+            {
                 animator.SetTrigger("hurt");
+                SoundManager.Instance.PlaySound2D(isPlayer ? "Player Hurt" : "Enemy Hurt");
+            }
             StartCoroutine(Invincibility());
         }
         else
@@ -84,6 +87,7 @@ public class Health : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("die");
+            SoundManager.Instance.PlaySound2D(isPlayer ? "Player Death" : "Enemy Death");
             Debug.Log($"{gameObject.name}: Death animation triggered");
         }
 

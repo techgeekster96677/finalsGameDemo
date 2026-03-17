@@ -4193,6 +4193,39 @@ MonoBehaviour:
   - groupID: Hover
     clips:
     - {fileID: 8300000, guid: f1363c5ba12c37b4abf9f3e309b6fa00, type: 3}
+  - groupID: Player Run
+    clips:
+    - {fileID: 8300000, guid: 5bffab8dd66490c44bd646bb56e1feb2, type: 3}
+  - groupID: Player Jump
+    clips:
+    - {fileID: 8300000, guid: 4cc8eea142c88d74e80ed43cdfeefbdc, type: 3}
+  - groupID: Player Attack
+    clips:
+    - {fileID: 8300000, guid: 93132ce8a0b38804c9cbc70db2dcd8c5, type: 3}
+  - groupID: Player Land
+    clips:
+    - {fileID: 8300000, guid: 342a5b6b490bed8448c1f4b1b61cd03b, type: 3}
+  - groupID: Enemy Slash
+    clips:
+    - {fileID: 8300000, guid: dbdab328c1e8d8a40bc313b78dbd6306, type: 3}
+  - groupID: Enemy Death
+    clips:
+    - {fileID: 8300000, guid: 609f839cac8ffc24dab4ea005731724b, type: 3}
+  - groupID: Checkpoint Appear
+    clips:
+    - {fileID: 8300000, guid: f8fbcf4515fe5c440b9cb5712a5fb9fe, type: 3}
+  - groupID: Player Hurt
+    clips:
+    - {fileID: 8300000, guid: f5923e9b9c2d693478c479cc355dfda5, type: 3}
+  - groupID: Enemy Hurt
+    clips:
+    - {fileID: 8300000, guid: c95a9e5f24c6c9a4fbc506e2458ef345, type: 3}
+  - groupID: Player Die
+    clips:
+    - {fileID: 8300000, guid: 82b76f04737ac73469a194932d2d3d40, type: 3}
+  - groupID: Health Pickup
+    clips:
+    - {fileID: 8300000, guid: c91635c33c0dd5c44bedb96ec97215bd, type: 3}
 --- !u!4 &2085800022
 Transform:
   m_ObjectHideFlags: 0

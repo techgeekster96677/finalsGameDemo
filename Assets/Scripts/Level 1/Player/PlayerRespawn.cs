@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    [SerializeField] private AudioClip checkpointSound;
     private Transform currentCheckpoint;
     private Health playerHealth;
     private void Awake()
@@ -14,10 +13,9 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (currentCheckpoint != null)
         {
+            SoundManager.Instance.PlaySound2D("Checkpoint Appear");
             transform.position = currentCheckpoint.position;
             playerHealth.Respawn();
-            AudioSource.PlayClipAtPoint(checkpointSound, transform.position);
-
         }
         else
         {
@@ -30,7 +28,7 @@ public class PlayerRespawn : MonoBehaviour
         if(collision.CompareTag("Checkpoint"))
         {
             currentCheckpoint = collision.transform;
-            AudioSource.PlayClipAtPoint(checkpointSound, transform.position);
+            SoundManager.Instance.PlaySound2D("Checkpoint Appear");
             collision.GetComponent<Collider2D>().enabled = false; // Disable collider to prevent multiple triggers
             collision.GetComponent<Animator>()?.SetTrigger("appear");
         }

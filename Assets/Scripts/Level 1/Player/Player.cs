@@ -19,6 +19,10 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    [Header("Audio")]
+    private float lastFootstepTime = 0f;
+    public float footstepCooldown = 0.3f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -82,6 +86,13 @@ public class Player : MonoBehaviour
         // Update animator parameters
         animator.SetBool("run", moveX != 0);
         animator.SetBool("grounded", isGrounded);
+
+        // Play running sound with cooldown
+        if (moveX != 0 && isGrounded && Time.time > lastFootstepTime + footstepCooldown)
+        {
+            SoundManager.Instance.PlaySound2D("Player Run");
+            lastFootstepTime = Time.time;
+        }
     }
 
     void FixedUpdate()
@@ -108,6 +119,7 @@ public class Player : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         animator.SetTrigger("jump");
+        SoundManager.Instance.PlaySound2D("Player Jump");
     }
 
     // Optional: Visualize the ground check in the editor
