@@ -198,22 +198,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420028}
-    - target: {fileID: 631349663123785018, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.6379943
-      objectReference: {fileID: 0}
-    - target: {fileID: 631349663123785018, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4.290609
-      objectReference: {fileID: 0}
-    - target: {fileID: 631349663123785018, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -56.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 631349663123785018, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 631948001320401915, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
       propertyPath: cam
       value: 
@@ -222,6 +206,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420028}
+    - target: {fileID: 663873690442806570, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1377363407852594435, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
       propertyPath: attackCooldown
       value: 2
@@ -238,6 +226,31 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420028}
+    - target: {fileID: 2176305642986411836, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2176305642986411836, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[1].line
+      value: Those monsters keep getting closer while leaving the forests... It's
+        only a matter of time until they scare off every last of my customers!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2176305642986411836, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[2].line
+      value: Leave it to me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2176305642986411836, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[1].character.icon
+      value: 
+      objectReference: {fileID: 7095889761123657688, guid: 4b53ffc3741f76a43affb8f5bf8b4784, type: 3}
+    - target: {fileID: 2176305642986411836, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[2].character.icon
+      value: 
+      objectReference: {fileID: 2546757870057634713, guid: 9400ac965be7e534ca8083b6243ae494, type: 3}
+    - target: {fileID: 2176305642986411836, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[2].character.name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2283402148700347198, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
       propertyPath: cam
       value: 
@@ -278,6 +291,30 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420028}
+    - target: {fileID: 5852851304944154840, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852851304944154840, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[2].line
+      value: Why is that?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852851304944154840, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[2].character.icon
+      value: 
+      objectReference: {fileID: 2546757870057634713, guid: 9400ac965be7e534ca8083b6243ae494, type: 3}
+    - target: {fileID: 5852851304944154840, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[2].character.name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150696622660145131, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: components.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150696622660145131, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+      propertyPath: 'components.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1989235234}
     - target: {fileID: 6423173862763633427, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
       propertyPath: cam
       value: 
@@ -371,6 +408,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5337770124328775319, guid: 26a362556abd4994fa24deb97240d13e, type: 3}
   m_PrefabInstance: {fileID: 4166015779623420409}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1613755493 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2979600402571219105, guid: 26a362556abd4994fa24deb97240d13e, type: 3}
+  m_PrefabInstance: {fileID: 4166015779623420409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347ca3249ce80d141a554e8d8b217e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMelee
+--- !u!114 &1613755495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6475889059338817297, guid: 26a362556abd4994fa24deb97240d13e, type: 3}
+  m_PrefabInstance: {fileID: 4166015779623420409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378e465793d5c0e4e8930c405279927c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
 --- !u!1 &1687709189
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +558,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1989235234 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6454796565747069411, guid: 523dc7c5ab5603249818bc224f861161, type: 3}
+  m_PrefabInstance: {fileID: 1148955864}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8382869e945be934787e6c38438c1275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyPatrol
 --- !u!1001 &4166015779623420409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -511,9 +581,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_(Warrior)
       objectReference: {fileID: 0}
+    - target: {fileID: 2464592053293497402, guid: 26a362556abd4994fa24deb97240d13e, type: 3}
+      propertyPath: components.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2464592053293497402, guid: 26a362556abd4994fa24deb97240d13e, type: 3}
+      propertyPath: 'components.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1613755495}
+    - target: {fileID: 2464592053293497402, guid: 26a362556abd4994fa24deb97240d13e, type: 3}
+      propertyPath: 'components.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1613755493}
     - target: {fileID: 5337770124328775319, guid: 26a362556abd4994fa24deb97240d13e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.8
+      value: -29.88
       objectReference: {fileID: 0}
     - target: {fileID: 5337770124328775319, guid: 26a362556abd4994fa24deb97240d13e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -612,10 +694,22 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1613755485}
+    - target: {fileID: 4809608518351356829, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -69.57332
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809608518351356829, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.9762986
+      objectReference: {fileID: 0}
     - target: {fileID: 8843654838785404263, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 1613755491}
+    - target: {fileID: 9133202609174419077, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -70.92645
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

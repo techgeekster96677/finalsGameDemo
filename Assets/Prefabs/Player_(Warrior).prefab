@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4076222009067259539}
   - component: {fileID: 2464592053293497402}
   - component: {fileID: 2979600402571219105}
+  - component: {fileID: 3242714305111513011}
   m_Layer: 8
   m_Name: Player_(Warrior)
   m_TagString: Player
@@ -223,6 +224,7 @@ MonoBehaviour:
   deathAnimationLength: 1
   destroyEnemyOnDeath: 1
   destroyDelay: 2
+  components: []
 --- !u!114 &2979600402571219105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +245,19 @@ MonoBehaviour:
   attackDamage: 1
   cooldownTime: 0.5
   animator: {fileID: 4076222009067259539}
+--- !u!114 &3242714305111513011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360715654287164581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d818d802244e01b48a86792069f5ac50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
+  checkpointSound: {fileID: 8300000, guid: f8fbcf4515fe5c440b9cb5712a5fb9fe, type: 3}
 --- !u!1 &2722892906232400926
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,6 +478,7 @@ MonoBehaviour:
   deathAnimationLength: 1
   destroyEnemyOnDeath: 1
   destroyDelay: 2
+  components: []
 --- !u!1 &2937721268582296141
 GameObject:
   m_ObjectHideFlags: 0

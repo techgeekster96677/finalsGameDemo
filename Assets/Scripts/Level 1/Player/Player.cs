@@ -110,11 +110,6 @@ public class Player : MonoBehaviour
         animator.SetTrigger("jump");
     }
 
-    void Die()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
-    }
-
     // Optional: Visualize the ground check in the editor
     private void OnDrawGizmosSelected()
     {

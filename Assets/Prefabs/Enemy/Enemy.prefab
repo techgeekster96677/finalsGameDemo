@@ -191,8 +191,7 @@ PrefabInstance:
       propertyPath: attackCooldown
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 411183600589017156, guid: b1d99c5f0257f79499a4a0c0cd3e283c, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
