@@ -22,7 +22,19 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        // Check if we are in the Unity Editor
+        if (Application.isEditor)
+        {
+            // Stop play mode in Editor
+            Debug.Log("Stopping game in Editor...");
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
+        else
+        {
+            // Quit the actual game application
+            Debug.Log("Quitting game application...");
+            Application.Quit();
+        }
     }
 
     public void SetMusicVolume(float volume)
