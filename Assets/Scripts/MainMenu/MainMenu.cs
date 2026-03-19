@@ -35,6 +35,8 @@ public class MainMenu : MonoBehaviour
             Debug.Log("Quitting game application...");
             Application.Quit();
         }
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 
     public void SetMusicVolume(float volume)

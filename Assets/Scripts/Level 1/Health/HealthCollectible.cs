@@ -9,6 +9,7 @@ public class HealthCollectible : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<Health>().Heal(healthAmount);
+            SoundManager.Instance.PlaySound2D("Health Pickup");
             gameObject.SetActive(false);
         }
     }

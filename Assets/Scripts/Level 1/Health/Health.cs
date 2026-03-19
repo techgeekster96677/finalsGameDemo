@@ -19,6 +19,9 @@ public class Health : MonoBehaviour
     [SerializeField] private bool destroyEnemyOnDeath = true;
     [SerializeField] private float destroyDelay = 2f;
 
+    [Header("Components")]
+    public Behaviour[] components;
+
     // Reference to check if this is the player
     private bool isPlayer;
 
@@ -44,7 +47,10 @@ public class Health : MonoBehaviour
         {
             //hurt
             if (animator != null)
+            {
                 animator.SetTrigger("hurt");
+                SoundManager.Instance.PlaySound2D(isPlayer ? "Player Hurt" : "Enemy Hurt");
+            }
             StartCoroutine(Invincibility());
         }
         else
@@ -60,7 +66,7 @@ public class Health : MonoBehaviour
     {
         dead = true;
 
-        // Stop any movement immediately
+        /*
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -75,36 +81,19 @@ public class Health : MonoBehaviour
         {
             col.enabled = false;
         }
+        */
 
         // Play death animation
         if (animator != null)
         {
             animator.SetTrigger("die");
+            SoundManager.Instance.PlaySound2D(isPlayer ? "Player Death" : "Enemy Death");
             Debug.Log($"{gameObject.name}: Death animation triggered");
         }
 
-        // Disable components based on what this is
-        Player player = GetComponent<Player>();
-        if (player != null)
-        {
-            // This is the player - disable player controls but keep camera following?
-            player.enabled = false;
-            Debug.Log("Player died - game over!");
-            // You might want to show game over screen here
-        }
-
-        // Enemy specific (only disable if this is an enemy)
-        EnemyPatrol enemyPatrol = GetComponentInParent<EnemyPatrol>();
-        if (enemyPatrol != null)
-        {
-            enemyPatrol.enabled = false;
-        }
-
-        Enemy enemy = GetComponent<Enemy>();
-        if (enemy != null)
-        {
-            enemy.enabled = false;
-        }
+        // Disable components for all (player/enemy) to prevent further actions
+        foreach (Behaviour component in components)
+            component.enabled = false;
 
         // Wait for death animation to play
         yield return new WaitForSeconds(deathAnimationLength);
@@ -120,6 +109,20 @@ public class Health : MonoBehaviour
     public void Heal(float amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, startingHealth);
+    }
+
+    public void Respawn()
+    {
+        dead = false;
+
+        Heal(startingHealth);
+        animator.ResetTrigger("die");
+        animator.Play("player_idle"); // Ensure we go back to idle state
+        StartCoroutine(Invincibility());
+
+        //Re-enable components for all (player/enemy) to prevent further actions
+        foreach (Behaviour component in components)
+            component.enabled = true;
     }
 
     private IEnumerator Invincibility()

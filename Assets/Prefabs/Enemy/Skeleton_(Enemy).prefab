@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 738225454605378926}
   - component: {fileID: 6016588165493123389}
   - component: {fileID: 6046468650319826165}
-  - component: {fileID: 411183600589017156}
   - component: {fileID: 8906655385109241472}
   - component: {fileID: 4457440648667542632}
   m_Layer: 7
@@ -164,20 +163,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.15417744, y: 0.5687387}
   m_EdgeRadius: 0
---- !u!114 &411183600589017156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3394033345746064024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd5996bc6e774749bce9a82a9ab211b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Background
-  cam: {fileID: 0}
-  parallaxEffect: 0.3
 --- !u!114 &8906655385109241472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,3 +202,5 @@ MonoBehaviour:
   deathAnimationLength: 0.5
   destroyEnemyOnDeath: 1
   destroyDelay: 0.5
+  components:
+  - {fileID: 8906655385109241472}

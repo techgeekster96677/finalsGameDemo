@@ -49,6 +49,7 @@ public class Enemy : MonoBehaviour
                 isAttacking = true;
                 cooldownTimer = 0f;
                 animator.SetTrigger("meleeAttack");
+                SoundManager.Instance.PlaySound2D("Enemy Slash");
             }
         }
         else
