@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class Player : MonoBehaviour
     [Header("Audio")]
     private float lastFootstepTime = 0f;
     public float footstepCooldown = 0.3f;
+
+    private int gemCounter = 0;
+    public TextMeshProUGUI counterText;
 
     void Start()
     {
@@ -129,6 +133,17 @@ public class Player : MonoBehaviour
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+            if(collision.CompareTag("Gem") && collision.gameObject.activeSelf == true)
+            {
+                collision.gameObject.SetActive(false);
+                gemCounter += 1;
+                counterText.text = "Gems: " + gemCounter;
+                SoundManager.Instance.PlaySound2D("Gem Pickup");
         }
     }
 }

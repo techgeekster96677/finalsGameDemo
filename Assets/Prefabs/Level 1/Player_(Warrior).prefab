@@ -185,6 +185,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackOrigin: {fileID: 3691637293761896167}
+  footstepCooldown: 0.3
 --- !u!95 &4076222009067259539
 Animator:
   serializedVersion: 7
@@ -224,6 +225,7 @@ MonoBehaviour:
   deathAnimationLength: 1
   destroyEnemyOnDeath: 1
   destroyDelay: 2
+  fallDeathY: -5
   components: []
 --- !u!114 &2979600402571219105
 MonoBehaviour:
@@ -257,7 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d818d802244e01b48a86792069f5ac50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
-  checkpointSound: {fileID: 8300000, guid: f8fbcf4515fe5c440b9cb5712a5fb9fe, type: 3}
 --- !u!1 &2722892906232400926
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +440,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackOrigin: {fileID: 0}
+  footstepCooldown: 0.3
 --- !u!95 &7389684587506616761
 Animator:
   serializedVersion: 7
@@ -478,6 +480,7 @@ MonoBehaviour:
   deathAnimationLength: 1
   destroyEnemyOnDeath: 1
   destroyDelay: 2
+  fallDeathY: 0
   components: []
 --- !u!1 &2937721268582296141
 GameObject:

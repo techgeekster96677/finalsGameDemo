@@ -12,10 +12,14 @@ public class LevelManager : MonoBehaviour
     public GameObject transitionsContainer;
 
     private SceneTransition[] transitions;
+
+    // Add this one line
+    private bool skipTransition = false;
+
     public void Awake()
     {
-        if(instance == null)
-        { 
+        if (instance == null)
+        {
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -30,6 +34,10 @@ public class LevelManager : MonoBehaviour
 
     public void LoadScene(string sceneName, string transitionName)
     {
+        // Add these 3 lines
+        string currentScene = SceneManager.GetActiveScene().name;
+        skipTransition = (currentScene != "Menu");
+
         StartCoroutine(LoadSceneAsync(sceneName, transitionName));
     }
 
@@ -40,7 +48,11 @@ public class LevelManager : MonoBehaviour
         AsyncOperation scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
 
-        yield return transition.AnimateTransitionIn();
+        // Add this if statement
+        if (!skipTransition)
+        {
+            yield return transition.AnimateTransitionIn();
+        }
 
         progressBar.gameObject.SetActive(true);
 
@@ -53,6 +65,10 @@ public class LevelManager : MonoBehaviour
         scene.allowSceneActivation = true;
         progressBar.gameObject.SetActive(false);
 
-        yield return transition.AnimateTransitionOut();
+        // Add this if statement
+        if (!skipTransition)
+        {
+            yield return transition.AnimateTransitionOut();
+        }
     }
 }

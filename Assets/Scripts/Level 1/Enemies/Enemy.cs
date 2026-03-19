@@ -23,6 +23,9 @@ public class Enemy : MonoBehaviour
     private bool isAttacking = false;
     private EnemyPatrol enemyPatrol;
 
+    // Add this flag to track if encounter sound has been played
+    private bool hasPlayedEncounterSound = false;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -40,6 +43,13 @@ public class Enemy : MonoBehaviour
         // Only check for player if we have a boxCollider2D
         if (boxCollider2D != null && PlayerInSight())
         {
+            // Play encounter sound only once when player is first detected
+            if (!hasPlayedEncounterSound)
+            {
+                SoundManager.Instance.PlaySound2D("Enemy Encounter");
+                hasPlayedEncounterSound = true;
+            }
+
             // Stop patrol when player is detected
             if (enemyPatrol != null)
                 enemyPatrol.enabled = false;
@@ -54,6 +64,12 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            // Reset the sound flag when player leaves sight
+            if (hasPlayedEncounterSound)
+            {
+                hasPlayedEncounterSound = false;
+            }
+
             // Resume patrol when player is out of sight or no collider
             if (enemyPatrol != null)
                 enemyPatrol.enabled = !PlayerInSight();
@@ -61,7 +77,7 @@ public class Enemy : MonoBehaviour
 
         // Check for touch damage (player trying to go through enemy)
         CheckTouchDamage();
-    } 
+    }
 
     private void CheckTouchDamage()
     {

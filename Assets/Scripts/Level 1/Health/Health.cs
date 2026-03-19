@@ -18,6 +18,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float deathAnimationLength = 1f;
     [SerializeField] private bool destroyEnemyOnDeath = true;
     [SerializeField] private float destroyDelay = 2f;
+    [SerializeField] private float fallDeathY;
 
     [Header("Components")]
     public Behaviour[] components;
@@ -33,6 +34,14 @@ public class Health : MonoBehaviour
 
         // Check if this is the player
         isPlayer = GetComponent<Player>() != null;
+    }
+    private void Update()
+    {
+        // Check if this is the player and if they've fallen below the death threshold
+        if (isPlayer && !dead && transform.position.y < fallDeathY)
+        {
+            StartCoroutine(Die());
+        }
     }
 
     public void TakeDamage(float damage)
@@ -65,23 +74,6 @@ public class Health : MonoBehaviour
     private IEnumerator Die()
     {
         dead = true;
-
-        /*
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector2.zero;
-            // Fix: Use bodyType instead of isKinematic
-            rb.bodyType = RigidbodyType2D.Kinematic;
-        }
-
-        // Disable collider so things can pass through
-        Collider2D col = GetComponent<Collider2D>();
-        if (col != null)
-        {
-            col.enabled = false;
-        }
-        */
 
         // Play death animation
         if (animator != null)

@@ -4489,6 +4489,39 @@ MonoBehaviour:
   - groupID: Hover
     clips:
     - {fileID: 8300000, guid: f1363c5ba12c37b4abf9f3e309b6fa00, type: 3}
+  - groupID: Level Complete
+    clips:
+    - {fileID: 8300000, guid: 0fa96f27e6df51e469fa5f5877077178, type: 3}
+  - groupID: Player Run
+    clips:
+    - {fileID: 8300000, guid: d244b4f429e95d74888b719adea5acf1, type: 3}
+  - groupID: Player Jump
+    clips:
+    - {fileID: 8300000, guid: 4cc8eea142c88d74e80ed43cdfeefbdc, type: 3}
+  - groupID: Checkpoint Appear
+    clips:
+    - {fileID: 8300000, guid: ea3cda7c271db3445b53ebf5e79a6667, type: 3}
+  - groupID: Player Death
+    clips:
+    - {fileID: 8300000, guid: 609f839cac8ffc24dab4ea005731724b, type: 3}
+  - groupID: Enemy Death
+    clips:
+    - {fileID: 8300000, guid: 609f839cac8ffc24dab4ea005731724b, type: 3}
+  - groupID: Enemy Slash
+    clips:
+    - {fileID: 8300000, guid: dbdab328c1e8d8a40bc313b78dbd6306, type: 3}
+  - groupID: Health Pickup
+    clips:
+    - {fileID: 8300000, guid: c91635c33c0dd5c44bedb96ec97215bd, type: 3}
+  - groupID: Player Hurt
+    clips:
+    - {fileID: 8300000, guid: 0729b81caf600c34984ffe7e9874638d, type: 3}
+  - groupID: Enemy Hurt
+    clips:
+    - {fileID: 8300000, guid: c95a9e5f24c6c9a4fbc506e2458ef345, type: 3}
+  - groupID: Gem Pickup
+    clips:
+    - {fileID: 8300000, guid: 43eafcfb590447d48b02c42e3c93d6c9, type: 3}
 --- !u!4 &2085800022
 Transform:
   m_ObjectHideFlags: 0
@@ -4535,6 +4568,12 @@ MonoBehaviour:
   musicTracks:
   - trackName: MainMenu
     audioClip: {fileID: 8300000, guid: 1691c14c63b29714f920645a9ac0468c, type: 3}
+  - trackName: Level 1
+    audioClip: {fileID: 8300000, guid: 1691c14c63b29714f920645a9ac0468c, type: 3}
+  - trackName: Level 2
+    audioClip: {fileID: 8300000, guid: 29ebb8416b4294d43a7e925ff67ce6cd, type: 3}
+  - trackName: Game Over
+    audioClip: {fileID: 0}
 --- !u!224 &2138459871 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5881916200632528627, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
