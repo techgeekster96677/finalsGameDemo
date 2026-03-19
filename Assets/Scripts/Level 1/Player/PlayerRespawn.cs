@@ -4,14 +4,23 @@ public class PlayerRespawn : MonoBehaviour
 {
     private Transform currentCheckpoint;
     private Health playerHealth;
+    private UIManager uiManager;
+
     private void Awake()
     {
         playerHealth = GetComponent<Health>();
+        uiManager = FindFirstObjectByType<UIManager>();  
     }
 
     public void RespawnToCheckpoint()
     {
-        if (currentCheckpoint != null)
+        if (currentCheckpoint == null)
+        {
+            //Show game over screen or restart level
+            uiManager.ShowGameOverUI();
+            return;
+        }
+        else if (currentCheckpoint != null)
         {
             SoundManager.Instance.PlaySound2D("Checkpoint Appear");
             transform.position = currentCheckpoint.position;
