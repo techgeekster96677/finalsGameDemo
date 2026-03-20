@@ -142,7 +142,7 @@ public class Player : MonoBehaviour
             {
                 collision.gameObject.SetActive(false);
                 gemCounter += 1;
-                counterText.text = "Gems: " + gemCounter;
+                counterText.text = "Gems: " + gemCounter + "/30";
                 SoundManager.Instance.PlaySound2D("Gem Pickup");
         }
     }
