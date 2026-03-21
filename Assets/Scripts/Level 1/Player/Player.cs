@@ -4,27 +4,30 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
+    // Player movement parameters
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
-    // Add this for attack origin
-    [Header("Attack")]
+    // New field for attack origin
     [SerializeField] private Transform attackOrigin;
     private Vector3 attackOriginInitialLocalPos;
 
+    // Player state components
     private Rigidbody2D rb;
     private bool isGrounded;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    [Header("Audio")]
+    // Footstep sound cooldown
     private float lastFootstepTime = 0f;
     public float footstepCooldown = 0.3f;
 
+    // Gem collection
     private int gemCounter = 0;
+    public int totalGems = 0; // set per-level in inspector, or leave 0 to auto-count
     public TextMeshProUGUI counterText;
 
     void Start()
@@ -48,6 +51,14 @@ public class Player : MonoBehaviour
 
         // Make sure we're not triggering any jump animation at start
         animator.ResetTrigger("jump");
+
+        // Initialize gem counter UI
+        if (totalGems <= 0)
+        {
+            totalGems = GameObject.FindGameObjectsWithTag("Gem").Length;
+        }
+
+        counterText.text = $"Gems: {gemCounter}/{totalGems}";
     }
 
     void Update()
@@ -138,12 +149,13 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-            if(collision.CompareTag("Gem") && collision.gameObject.activeSelf == true)
-            {
-                collision.gameObject.SetActive(false);
-                gemCounter += 1;
-                counterText.text = "Gems: " + gemCounter + "/30";
-                SoundManager.Instance.PlaySound2D("Gem Pickup");
+        // Check if the collided object is a gem and is active
+        if (collision.CompareTag("Gem") && collision.gameObject.activeSelf == true)
+        {
+            collision.gameObject.SetActive(false);                  // Deactivate the gem instead of destroying it
+            gemCounter += 1;                                        // Increment the gem counter
+            counterText.text = $"Gems: {gemCounter}/{totalGems}";   // Update the UI text with the new gem count
+            SoundManager.Instance.PlaySound2D("Gem Pickup");        // Play the gem pickup sound effect
         }
     }
 }
