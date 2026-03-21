@@ -14,7 +14,8 @@ public class Background : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float distance = cam.transform.position.x * parallaxEffect; // 0 = move with cam | 1 = move with cam but slower | 0.5 = move slower
+        float distance = cam.transform.position.x * parallaxEffect; 
+        // 0 = move with cam | 1 = move with cam but slower | 0.5 = move slower
 
         transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
     }
