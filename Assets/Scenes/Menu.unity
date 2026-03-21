@@ -1957,8 +1957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
   audioMixer: {fileID: 24100000, guid: 3f6f043e7c3dca242b00165a1114caad, type: 2}
-  musicSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
+  musicSlider: {fileID: 1469497729}
+  sfxSlider: {fileID: 1691199450}
 --- !u!1 &774950878
 GameObject:
   m_ObjectHideFlags: 0
