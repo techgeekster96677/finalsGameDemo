@@ -83,12 +83,6 @@ public class UIManager : MonoBehaviour
         LevelManager.instance.LoadScene(currentSceneName, "CrossFade");
     }
 
-    //public void ReturnToMenu()
-    //{
-    //    Time.timeScale = 1f;
-    //    LevelManager.instance.LoadScene("Menu", "CrossFade");
-    //}
-
     public void QuitGame()
     {
         Application.Quit();
@@ -122,11 +116,6 @@ public class UIManager : MonoBehaviour
                         SceneManager.LoadScene(nextSceneName);
                     }
                 }
-                //else
-                //{
-                //    Debug.Log("All levels completed! Returning to menu...");
-                //    ReturnToMenu();
-                //}
             }
             else
             {
