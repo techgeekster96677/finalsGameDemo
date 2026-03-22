@@ -27,18 +27,25 @@ public class DialogueManager : MonoBehaviour
     // Animator to control the show/hide animations of the dialogue box
     public Animator animator;
 
-    // Awake is called when the script instance is being loaded
+
+    // To initialize the singleton instance and set up the dialogue lines queue
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
 
         lines = new Queue<DialogueLine>();
+
+        // Load the player's name from PlayerPrefs, or use the default if not set
+        playerName = PlayerPrefs.GetString("user_name", "Player");
+
+        Debug.Log("Loaded playerName = " + playerName);
     }
+
 
     // Method to start a dialogue sequence
     public void StartDialogue(Dialogue dialogue)
-    { 
+    {
         isDialogueActive = true; // Set the dialogue active flag to true
 
         animator.Play("show"); // Play the show animation for the dialogue box
@@ -53,6 +60,7 @@ public class DialogueManager : MonoBehaviour
 
         DisplayNextDialogueLine(); // Display the first line of dialogue
     }
+
 
     // Method to display the next line of dialogue
     public void DisplayNextDialogueLine()
@@ -69,7 +77,20 @@ public class DialogueManager : MonoBehaviour
 
         // If the character is the player, set the name to the playerName variable
         characterIcon.sprite = currentLine.character.icon;
-        characterName.text = currentLine.character.name;
+
+        // If the character is the player, set the name to the playerName variable
+        // otherwise use the character's name
+        Debug.Log("Character in dialogue = " + currentLine.character.name);
+        Debug.Log("Player name = " + playerName);
+
+        if (currentLine.character.name == "Player")
+        {
+            characterName.text = playerName;
+        }
+        else
+        {
+            characterName.text = currentLine.character.name;
+        }
 
         // coroutine to type out the dialogue line letter by letter in the dialogue area
         StopAllCoroutines();
@@ -78,13 +99,8 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(currentLine));
     }
 
-    /// <summary>
-    /// Animates the display of a dialogue line by revealing its text one character at a time in the dialogue area.
-    /// </summary>
-    /// <remarks>Use this coroutine to create a typewriter effect for dialogue text. The speed of the
-    /// animation is determined by the typing speed setting.</remarks>
-    /// <param>The dialogue line to display, containing the text to be animated.</param>
-    /// <returns>An enumerator that performs the character-by-character text animation when iterated.</returns>
+
+    // Coroutine to delay the display of the first line of dialogue
     IEnumerator TypeSentence(DialogueLine dialogueLine)
     {
         dialogueArea.text = "";
@@ -95,11 +111,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Ends the current dialogue session and hides the dialogue interface.
-    /// </summary>
-    /// <remarks>Call this method to terminate an active dialogue. After calling, the dialogue UI will be
-    /// hidden and no further dialogue input will be processed until a new session is started.</remarks>
+    // Coroutine to delay the display of the first line of dialogue
     void EndDialogue()
     {
         isDialogueActive = false;
