@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DisplayText
   obj_text: {fileID: 723285465}
-  display: {fileID: 723285465}
+  display: {fileID: 142948100}
 --- !u!4 &17629313
 Transform:
   m_ObjectHideFlags: 0
@@ -159,11 +159,11 @@ Transform:
   m_GameObject: {fileID: 17629311}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 771244968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &64941948
 GameObject:
@@ -1937,6 +1937,7 @@ RectTransform:
   - {fileID: 897516848}
   - {fileID: 197582352}
   - {fileID: 1623359504}
+  - {fileID: 17629313}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4614,19 +4615,47 @@ PrefabInstance:
     m_TransformParent: {fileID: 197582352}
     m_Modifications:
     - target: {fileID: 564388032616307539, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 564388032616307539, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 564388032616307539, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 771244969}
     - target: {fileID: 564388032616307539, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 17629312}
+    - target: {fileID: 564388032616307539, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 564388032616307539, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 564388032616307539, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Create
       objectReference: {fileID: 0}
     - target: {fileID: 564388032616307539, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MainMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 564388032616307539, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DisplayText, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 564388032616307539, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 564388032616307539, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3185082379817217586, guid: 0842fb03a2a3abb4eac14959ce5df552, type: 3}
@@ -4751,7 +4780,6 @@ SceneRoots:
   - {fileID: 1854776470}
   - {fileID: 525555919}
   - {fileID: 771244968}
-  - {fileID: 17629313}
   - {fileID: 669567745}
   - {fileID: 2085800022}
   - {fileID: 1083699782}
