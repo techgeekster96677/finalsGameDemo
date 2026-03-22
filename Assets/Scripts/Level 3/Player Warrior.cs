@@ -99,7 +99,7 @@ public class PlayerWarrior : MonoBehaviour
 
             foreach (Collider2D enemy in hitEnemies)
             {
-                enemy.GetComponent<Spider>().TakeDamage(1);
+                enemy.SendMessage("TakeDamage", 1);
             }
 
             Invoke(nameof(ResetAttack), attackCooldown);
