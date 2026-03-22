@@ -13,7 +13,7 @@ public class PlayerWarrior : MonoBehaviour
 
     [Header("Attack")]
     public Transform attackPoint;
-    public float attackRange = 2f;
+    public float attackRange = 4f;
     public LayerMask enemyLayer;
     public int attackDamage = 1;
 
@@ -27,7 +27,7 @@ public class PlayerWarrior : MonoBehaviour
     private float move;
 
     private bool canAttack = true;
-    public float attackCooldown = 0.5f;
+    public float attackCooldown = 0.2f;
 
     void Start()
     {
@@ -99,7 +99,31 @@ public class PlayerWarrior : MonoBehaviour
 
             foreach (Collider2D enemy in hitEnemies)
             {
-                enemy.SendMessage("TakeDamage", attackDamage);
+                Bat bat = enemy.GetComponentInParent<Bat>();
+
+                if (bat != null)
+                {
+                    Debug.Log("Hitting Bat!");
+                    bat.TakeDamage(attackDamage);
+                    continue;
+                }
+
+                Spider spider = enemy.GetComponentInParent<Spider>();
+
+                if (spider != null)
+                {
+                    Debug.Log("Hitting Spider!");
+                    spider.TakeDamage(attackDamage);
+                    continue;
+                }
+
+                Boss boss = enemy.GetComponentInParent<Boss>();
+
+                if (boss != null)
+                {
+                    Debug.Log("Hitting Boss!");
+                    boss.TakeDamage(attackDamage);
+                }
             }
 
             Invoke(nameof(ResetAttack), attackCooldown);

@@ -58,6 +58,8 @@ public class Bat : MonoBehaviour
 
         health -= damage;
 
+        Debug.Log("Bat HP: " + health); // 🔥 ADD THIS
+
         anim.SetTrigger("Hurt");
 
         if (health <= 0)
@@ -71,9 +73,16 @@ public class Bat : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log("Bat touched: " + col.name);
+
         if (col.CompareTag("Player"))
         {
-            col.GetComponent<PlayerWarrior>().TakeDamage(1);
+            PlayerWarrior player = col.GetComponent<PlayerWarrior>();
+
+            if (player != null)
+            {
+                player.TakeDamage(1);
+            }
         }
     }
 }
