@@ -1,0 +1,1937 @@
+fileFormatVersion: 2
+guid: 344815db982107047b82413e0bd7a8ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2152179821661674732
+    second: Eye bomb_0
+  - first:
+      213: -5311317592594538804
+    second: Eye bomb_1
+  - first:
+      213: -6286540386733499996
+    second: Eye bomb_2
+  - first:
+      213: 7853106293321428829
+    second: Eye bomb_3
+  - first:
+      213: 1938041050236395146
+    second: Eye bomb_4
+  - first:
+      213: 4823171776612551647
+    second: Eye bomb_5
+  - first:
+      213: 1313547196366374307
+    second: Eye bomb_6
+  - first:
+      213: 592139453894360558
+    second: Eye bomb_7
+  - first:
+      213: -9175499844735388889
+    second: Eye bomb_8
+  - first:
+      213: -865187032653924973
+    second: Eye bomb_9
+  - first:
+      213: -1882222073951062960
+    second: Eye bomb_10
+  - first:
+      213: 5650737719625101505
+    second: Eye bomb_11
+  - first:
+      213: -1793613406348615609
+    second: Eye bomb_12
+  - first:
+      213: 8905169591115980497
+    second: Eye bomb_13
+  - first:
+      213: 2572225737481801127
+    second: Eye bomb_14
+  - first:
+      213: 8415738480919673024
+    second: Eye bomb_15
+  - first:
+      213: -5247822391364334175
+    second: Eye bomb_16
+  - first:
+      213: 8761591987880442010
+    second: Eye bomb_17
+  - first:
+      213: -1565684584070907266
+    second: Eye bomb_18
+  - first:
+      213: 4964323443757701487
+    second: Eye bomb_19
+  - first:
+      213: 9143545014959654814
+    second: Eye bomb_20
+  - first:
+      213: 1950934321517716376
+    second: Eye bomb_21
+  - first:
+      213: 8822848380348153635
+    second: Eye bomb_22
+  - first:
+      213: 517610707722000302
+    second: Eye bomb_23
+  - first:
+      213: -6428500131918498022
+    second: Eye bomb_24
+  - first:
+      213: -8909175585475507727
+    second: Eye bomb_25
+  - first:
+      213: -3398052962237308921
+    second: Eye bomb_26
+  - first:
+      213: -5759503823498077426
+    second: Eye bomb_27
+  - first:
+      213: 59264096539630583
+    second: Eye bomb_28
+  - first:
+      213: -2555424699394289093
+    second: Eye bomb_29
+  - first:
+      213: 8531313724334812697
+    second: Eye bomb_30
+  - first:
+      213: -7175439981968362909
+    second: Eye bomb_31
+  - first:
+      213: 1876348045445780281
+    second: Eye bomb_32
+  - first:
+      213: -6864128143291235768
+    second: Eye bomb_33
+  - first:
+      213: 8512727112822576988
+    second: Eye bomb_34
+  - first:
+      213: 8828199876214795668
+    second: Eye bomb_35
+  - first:
+      213: -5275603140016505031
+    second: Eye bomb_36
+  - first:
+      213: 4428878132243078477
+    second: Eye bomb_37
+  - first:
+      213: -9005212038742486543
+    second: Eye bomb_38
+  - first:
+      213: -3603413184238059307
+    second: Eye bomb_39
+  - first:
+      213: 5282541350762588617
+    second: Eye bomb_40
+  - first:
+      213: -3249597675549162431
+    second: Eye bomb_41
+  - first:
+      213: -6132883434221704628
+    second: Eye bomb_42
+  - first:
+      213: -4647998026085476285
+    second: Eye bomb_43
+  - first:
+      213: -4809047673756975935
+    second: Eye bomb_44
+  - first:
+      213: -1838932512631674609
+    second: Eye bomb_45
+  - first:
+      213: -7924972025081702164
+    second: Eye bomb_46
+  - first:
+      213: -3584007523718780841
+    second: Eye bomb_47
+  - first:
+      213: 2297767905625963611
+    second: Eye bomb_48
+  - first:
+      213: -2264478899947081798
+    second: Eye bomb_49
+  - first:
+      213: 5175376177887127610
+    second: Eye bomb_50
+  - first:
+      213: 1195368940348265774
+    second: Eye bomb_51
+  - first:
+      213: -6009033409909191825
+    second: Eye bomb_52
+  - first:
+      213: -4562072092252324165
+    second: Eye bomb_53
+  - first:
+      213: -8767520505972807231
+    second: Eye bomb_54
+  - first:
+      213: -4511267481831998612
+    second: Eye bomb_55
+  - first:
+      213: 936902781471107954
+    second: Eye bomb_56
+  - first:
+      213: -6468288363554031966
+    second: Eye bomb_57
+  - first:
+      213: -5963146056678861333
+    second: Eye bomb_58
+  - first:
+      213: -2394860695608424614
+    second: Eye bomb_59
+  - first:
+      213: 2847508281951431937
+    second: Eye bomb_60
+  - first:
+      213: 2719309447822583875
+    second: Eye bomb_61
+  - first:
+      213: 7503782781818380630
+    second: Eye bomb_62
+  - first:
+      213: -5095086097848803797
+    second: Eye bomb_63
+  - first:
+      213: -6084289029817713183
+    second: Eye bomb_64
+  - first:
+      213: -2158825934184190913
+    second: Eye bomb_65
+  - first:
+      213: -6634759437987847476
+    second: Eye bomb_66
+  - first:
+      213: -2834201554318173253
+    second: Eye bomb_67
+  - first:
+      213: -5402067343329157345
+    second: Eye bomb_68
+  - first:
+      213: 583781085546977640
+    second: Eye bomb_69
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Eye bomb_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1319
+        width: 92
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec58e225241edd10800000000000000
+      internalID: 2152179821661674732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_1
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1311
+        width: 93
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce9e144ac86a46b0800000000000000
+      internalID: -5311317592594538804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_2
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1319
+        width: 92
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a95a9663d8b1c8a0800000000000000
+      internalID: -6286540386733499996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_3
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1312
+        width: 95
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5feec4f096dbfc60800000000000000
+      internalID: 7853106293321428829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_4
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 1319
+        width: 93
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e1777211e45ea10800000000000000
+      internalID: 1938041050236395146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_5
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1319
+        width: 91
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb4ea33d295fe240800000000000000
+      internalID: 4823171776612551647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_6
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1290
+        width: 75
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a5c0233738aa3210800000000000000
+      internalID: 1313547196366374307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_7
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1290
+        width: 73
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eedfdde22b3b73800800000000000000
+      internalID: 592139453894360558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_8
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1290
+        width: 72
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72335ed41831aa080800000000000000
+      internalID: -9175499844735388889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_9
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1310
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395736e4afc3ef3f0800000000000000
+      internalID: -865187032653924973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_10
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1290
+        width: 73
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0547fb50ff001e5e0800000000000000
+      internalID: -1882222073951062960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_11
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1290
+        width: 74
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0b72164047b6e40800000000000000
+      internalID: 5650737719625101505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_12
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 1290
+        width: 72
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74066322c1ecb17e0800000000000000
+      internalID: -1793613406348615609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_13
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1131
+        width: 91
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de141fbf84859b70800000000000000
+      internalID: 8905169591115980497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_14
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 1148
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad48b41ea162b320800000000000000
+      internalID: 2572225737481801127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_15
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1133
+        width: 89
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c87dc55f85bac470800000000000000
+      internalID: 8415738480919673024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_16
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1123
+        width: 92
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad4366d65dfb27b0800000000000000
+      internalID: -5247822391364334175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_17
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1115
+        width: 92
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98b588fd7d679970800000000000000
+      internalID: 8761591987880442010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_18
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1121
+        width: 231
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7af5288a22954ae0800000000000000
+      internalID: -1565684584070907266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_19
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1121
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f695257bed1d4e440800000000000000
+      internalID: 4964323443757701487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_20
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1125
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97c67c1fb564ee70800000000000000
+      internalID: 9143545014959654814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_21
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 1116
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8936e2ecd6c131b10800000000000000
+      internalID: 1950934321517716376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_22
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1094
+        width: 70
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f38c14bdd017a70800000000000000
+      internalID: 8822848380348153635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_23
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1094
+        width: 71
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea755bd323cee2700800000000000000
+      internalID: 517610707722000302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_24
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1094
+        width: 69
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17327e803169c6a0800000000000000
+      internalID: -6428500131918498022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_25
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1094
+        width: 71
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9462202004c5480800000000000000
+      internalID: -8909175585475507727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_26
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1094
+        width: 75
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700a1e1a5d0b7d0d0800000000000000
+      internalID: -3398052962237308921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_27
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 922
+        width: 805
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b94e5a9c12210b0800000000000000
+      internalID: -5759503823498077426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_28
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1016
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbdd2eb16c82d000800000000000000
+      internalID: 59264096539630583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_29
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 930
+        width: 121
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32185e66ce498cd0800000000000000
+      internalID: -2555424699394289093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_30
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 987
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e2466a1a0556670800000000000000
+      internalID: 8531313724334812697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_31
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 979
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362f3af7a57bb6c90800000000000000
+      internalID: -7175439981968362909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_32
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 967
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9335bc32b902a0a10800000000000000
+      internalID: 1876348045445780281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_33
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 940
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8424d5642d7bdb0a0800000000000000
+      internalID: -6864128143291235768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 923
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5750ade438432670800000000000000
+      internalID: 8512727112822576988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_35
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 902
+        width: 71
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49d2eeb7301148a70800000000000000
+      internalID: 8828199876214795668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_36
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 902
+        width: 72
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f716f35ea49c6b0800000000000000
+      internalID: -5275603140016505031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_37
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 902
+        width: 71
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d18d13239867d30800000000000000
+      internalID: 4428878132243078477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_38
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 902
+        width: 74
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1dea7cc5f070380800000000000000
+      internalID: -9005212038742486543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_39
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 729
+        width: 117
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d00886fcca1efdc0800000000000000
+      internalID: -3603413184238059307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_40
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 731
+        width: 153
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c92483de5b5f4940800000000000000
+      internalID: 5282541350762588617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_41
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 711
+        width: 150
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14405f5912c17e2d0800000000000000
+      internalID: -3249597675549162431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_42
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 827
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a665e820f93eaa0800000000000000
+      internalID: -6132883434221704628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_43
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 802
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3485572eb6efe7fb0800000000000000
+      internalID: -4647998026085476285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_44
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 798
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ccfbc1ce94d24db0800000000000000
+      internalID: -4809047673756975935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_45
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 793
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f092ca27f9cca76e0800000000000000
+      internalID: -1838932512631674609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_46
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 786
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce8d8167ee7d40290800000000000000
+      internalID: -7924972025081702164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_47
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 793
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7582a64652c034ec0800000000000000
+      internalID: -3584007523718780841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_48
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 772
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5cf02f6cbf43ef10800000000000000
+      internalID: 2297767905625963611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_49
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 777
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf694f2074f290e0800000000000000
+      internalID: -2264478899947081798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_50
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 763
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a382bf5a631a2d740800000000000000
+      internalID: 5175376177887127610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_51
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 749
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e255ef8c7bdc69010800000000000000
+      internalID: 1195368940348265774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_52
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 749
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b88ee63ff9b9ca0800000000000000
+      internalID: -6009033409909191825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_53
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 710
+        width: 71
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbeb39d5a9340b0c0800000000000000
+      internalID: -4562072092252324165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_54
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 710
+        width: 74
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c9a9885d82835680800000000000000
+      internalID: -8767520505972807231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_55
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 730
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bf1a28022c461c0800000000000000
+      internalID: -4511267481831998612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_56
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 617
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b29a6ad1c800d00800000000000000
+      internalID: 936902781471107954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_57
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 620
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a6b199f0060c36a0800000000000000
+      internalID: -6468288363554031966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_58
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 615
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be592eb6146ae3da0800000000000000
+      internalID: -5963146056678861333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_59
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 519
+        width: 217
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5707b7c2eeb3ced0800000000000000
+      internalID: -2394860695608424614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_60
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 622
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10da2b812b1648720800000000000000
+      internalID: 2847508281951431937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_61
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 622
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34824d7098decb520800000000000000
+      internalID: 2719309447822583875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_62
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 518
+        width: 572
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6512afdeeaac22860800000000000000
+      internalID: 7503782781818380630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_63
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 619
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ed0bd503e9a49b0800000000000000
+      internalID: -5095086097848803797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_64
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 617
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1edb8e20d53409ba0800000000000000
+      internalID: -6084289029817713183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_65
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 616
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3cec05304f4a02e0800000000000000
+      internalID: -2158825934184190913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_66
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 521
+        width: 188
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2609091799ce3a0800000000000000
+      internalID: -6634759437987847476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_67
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 555
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbb510dd3b4eaa8d0800000000000000
+      internalID: -2834201554318173253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_68
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 310
+        width: 971
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f90246f500805b0800000000000000
+      internalID: -5402067343329157345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye bomb_69
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 22
+        width: 402
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8699e96edc10a1800800000000000000
+      internalID: 583781085546977640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Eye bomb_0: 2152179821661674732
+      Eye bomb_1: -5311317592594538804
+      Eye bomb_10: -1882222073951062960
+      Eye bomb_11: 5650737719625101505
+      Eye bomb_12: -1793613406348615609
+      Eye bomb_13: 8905169591115980497
+      Eye bomb_14: 2572225737481801127
+      Eye bomb_15: 8415738480919673024
+      Eye bomb_16: -5247822391364334175
+      Eye bomb_17: 8761591987880442010
+      Eye bomb_18: -1565684584070907266
+      Eye bomb_19: 4964323443757701487
+      Eye bomb_2: -6286540386733499996
+      Eye bomb_20: 9143545014959654814
+      Eye bomb_21: 1950934321517716376
+      Eye bomb_22: 8822848380348153635
+      Eye bomb_23: 517610707722000302
+      Eye bomb_24: -6428500131918498022
+      Eye bomb_25: -8909175585475507727
+      Eye bomb_26: -3398052962237308921
+      Eye bomb_27: -5759503823498077426
+      Eye bomb_28: 59264096539630583
+      Eye bomb_29: -2555424699394289093
+      Eye bomb_3: 7853106293321428829
+      Eye bomb_30: 8531313724334812697
+      Eye bomb_31: -7175439981968362909
+      Eye bomb_32: 1876348045445780281
+      Eye bomb_33: -6864128143291235768
+      Eye bomb_34: 8512727112822576988
+      Eye bomb_35: 8828199876214795668
+      Eye bomb_36: -5275603140016505031
+      Eye bomb_37: 4428878132243078477
+      Eye bomb_38: -9005212038742486543
+      Eye bomb_39: -3603413184238059307
+      Eye bomb_4: 1938041050236395146
+      Eye bomb_40: 5282541350762588617
+      Eye bomb_41: -3249597675549162431
+      Eye bomb_42: -6132883434221704628
+      Eye bomb_43: -4647998026085476285
+      Eye bomb_44: -4809047673756975935
+      Eye bomb_45: -1838932512631674609
+      Eye bomb_46: -7924972025081702164
+      Eye bomb_47: -3584007523718780841
+      Eye bomb_48: 2297767905625963611
+      Eye bomb_49: -2264478899947081798
+      Eye bomb_5: 4823171776612551647
+      Eye bomb_50: 5175376177887127610
+      Eye bomb_51: 1195368940348265774
+      Eye bomb_52: -6009033409909191825
+      Eye bomb_53: -4562072092252324165
+      Eye bomb_54: -8767520505972807231
+      Eye bomb_55: -4511267481831998612
+      Eye bomb_56: 936902781471107954
+      Eye bomb_57: -6468288363554031966
+      Eye bomb_58: -5963146056678861333
+      Eye bomb_59: -2394860695608424614
+      Eye bomb_6: 1313547196366374307
+      Eye bomb_60: 2847508281951431937
+      Eye bomb_61: 2719309447822583875
+      Eye bomb_62: 7503782781818380630
+      Eye bomb_63: -5095086097848803797
+      Eye bomb_64: -6084289029817713183
+      Eye bomb_65: -2158825934184190913
+      Eye bomb_66: -6634759437987847476
+      Eye bomb_67: -2834201554318173253
+      Eye bomb_68: -5402067343329157345
+      Eye bomb_69: 583781085546977640
+      Eye bomb_7: 592139453894360558
+      Eye bomb_8: -9175499844735388889
+      Eye bomb_9: -865187032653924973
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
