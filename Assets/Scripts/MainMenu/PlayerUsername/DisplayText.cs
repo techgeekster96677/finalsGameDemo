@@ -23,8 +23,6 @@ public class DisplayText : MonoBehaviour
         // PlayerPrefs is like a small storage box that keeps data even after game closes
         // GetString tries to find a saved name. If none exists, it returns empty string
         obj_text.text = PlayerPrefs.GetString("user_name");
-
-        // Example: If player saved "John" last time, obj_text will show "John"
     }
 
     // This function runs when player clicks a button (like "Save" or "Submit")
@@ -42,7 +40,5 @@ public class DisplayText : MonoBehaviour
 
         // STEP 4: Actually write the data to disk (save it permanently)
         PlayerPrefs.Save();
-
-        // Now if you close and reopen the game, the name will still be there!
     }
 }
