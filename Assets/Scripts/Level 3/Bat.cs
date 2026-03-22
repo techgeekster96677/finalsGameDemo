@@ -35,7 +35,7 @@ public class Bat : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(
             transform.position,
-            target.position, // bat can move freely (X + Y)
+            target.position, 
             speed * Time.deltaTime
         );
 

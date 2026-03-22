@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerWarrior : MonoBehaviour
 {
@@ -26,6 +26,9 @@ public class PlayerWarrior : MonoBehaviour
     private bool isDead = false;
     private float move;
 
+    private bool canAttack = true;
+    public float attackCooldown = 0.5f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,7 +37,7 @@ public class PlayerWarrior : MonoBehaviour
 
     void Update()
     {
-        if (isDead) return;
+        if (isDead) return; 
 
         move = Input.GetAxis("Horizontal");
 
@@ -76,9 +79,6 @@ public class PlayerWarrior : MonoBehaviour
         );
     }
 
-    bool canAttack = true;
-    public float attackCooldown = 0.5f;
-
     void Attack()
     {
         if (Input.GetKeyDown(KeyCode.E) && canAttack)
@@ -99,7 +99,7 @@ public class PlayerWarrior : MonoBehaviour
 
             foreach (Collider2D enemy in hitEnemies)
             {
-                enemy.SendMessage("TakeDamage", 1);
+                enemy.SendMessage("TakeDamage", attackDamage);
             }
 
             Invoke(nameof(ResetAttack), attackCooldown);
@@ -113,12 +113,10 @@ public class PlayerWarrior : MonoBehaviour
 
     void HandleAnimation()
     {
-        if (anim == null) return;
+        if (anim == null || isDead) return; 
 
         anim.SetFloat("Speed", Mathf.Abs(move));
         anim.SetBool("isGrounded", isGrounded);
-
-        // Make sure this parameter exists in Animator!
         anim.SetFloat("yVelocity", rb.linearVelocity.y);
     }
 
@@ -134,14 +132,42 @@ public class PlayerWarrior : MonoBehaviour
 
         if (health <= 0)
         {
-            isDead = true;
-            anim.SetBool("isDead", true);
-
-            rb.linearVelocity = Vector2.zero;
+            Die();
         }
     }
 
-    // Optional: visualize attack range
+    void DisableAnimator()
+    {
+        anim.enabled = false;
+    }
+
+    void Die()
+    {
+        if (isDead) return;
+
+        isDead = true;
+
+        Debug.Log("PLAYER DIED!");
+
+        rb.linearVelocity = Vector2.zero;
+
+        rb.bodyType = RigidbodyType2D.Static;
+
+        GetComponent<Collider2D>().enabled = false;
+
+        anim.Play("DeathEffect");
+
+        Destroy(gameObject, 0.3f);
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Lava"))
+        {
+            Die(); 
+        }
+    }
+
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null) return;
