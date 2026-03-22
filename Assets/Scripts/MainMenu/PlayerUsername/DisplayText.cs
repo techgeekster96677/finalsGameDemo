@@ -1,12 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using System.IO;
-using System.Linq;
 using TMPro;           // For TextMeshPro text elements
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
 
 public class DisplayText : MonoBehaviour
 {

@@ -2877,6 +2877,14 @@ PrefabInstance:
       value: -1209
       objectReference: {fileID: 0}
     - target: {fileID: 8720434599915098451, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_text
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720434599915098451, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720434599915098451, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
