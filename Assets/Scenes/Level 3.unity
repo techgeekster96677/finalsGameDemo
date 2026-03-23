@@ -12425,14 +12425,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 347ca3249ce80d141a554e8d8b217e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMelee
-  attackOrigin: {fileID: 0}
+  attackOrigin: {fileID: 793536347}
   attackRadius: 1
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
   attackDamage: 0
   cooldownTime: 0.5
-  animator: {fileID: 0}
+  animator: {fileID: 779518581}
 --- !u!4 &780842476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5037502869626843199, guid: 900c2a0d068468b47913b586b860e010, type: 3}
