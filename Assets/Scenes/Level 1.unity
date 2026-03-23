@@ -3508,11 +3508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4809608518351356829, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.807396
+      value: -67.69806
       objectReference: {fileID: 0}
     - target: {fileID: 4809608518351356829, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.55279994
+      value: -0.9491198
       objectReference: {fileID: 0}
     - target: {fileID: 4832951603039225771, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -3520,7 +3520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5063747839743367039, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
       propertyPath: orthographic size
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6568460574321154310, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3636,7 +3636,7 @@ PrefabInstance:
       objectReference: {fileID: 2097174343}
     - target: {fileID: 8843654838785404263, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
       propertyPath: Lens.OrthographicSize
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8843654838785404263, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
       propertyPath: Target.TrackingTarget
@@ -3648,7 +3648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9133202609174419077, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.73407006
+      value: -0.9440701
       objectReference: {fileID: 0}
     - target: {fileID: 9213968471606600019, guid: 8b0ca43b0b42b6c4d8233908f1b108fd, type: 3}
       propertyPath: m_AnchoredPosition.x

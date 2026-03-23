@@ -26,17 +26,22 @@ public class Enemy : MonoBehaviour
     // Add this flag to track if encounter sound has been played
     private bool hasPlayedEncounterSound = false;
 
+    // Awake is called when the script instance is being loaded
     private void Awake()
     {
+        // Get references to components
         animator = GetComponent<Animator>();
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
 
+        // Ensure we have a BoxCollider2D reference
         if (boxCollider2D == null)
             boxCollider2D = GetComponent<BoxCollider2D>();
     }
 
+    // Update is called once per frame
     void Update()
     {
+        // Update timers
         cooldownTimer += Time.deltaTime;
         touchDamageTimer += Time.deltaTime;
 

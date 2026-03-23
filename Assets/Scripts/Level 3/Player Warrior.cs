@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 public class PlayerWarrior : MonoBehaviour
 {
@@ -20,12 +21,29 @@ public class PlayerWarrior : MonoBehaviour
     [Header("Health")]
     public int health = 3;
 
+    // Add attack origin for directional attacks
+    [Header("Attack Origin")]
+    [SerializeField] private Transform attackOrigin;
+    private Vector3 attackOriginInitialLocalPos;
+
+    // Player state components
     private Rigidbody2D rb;
     private Animator anim;
+    private SpriteRenderer spriteRenderer;
     private bool isGrounded;
     private bool isDead = false;
     private float move;
 
+    // Footstep sound cooldown
+    private float lastFootstepTime = 0f;
+    public float footstepCooldown = 0.3f;
+
+    // Gem collection
+    private int gemCounter = 0;
+    public int totalGems = 0;
+    public TextMeshProUGUI counterText;
+
+    // Attack cooldown
     private bool canAttack = true;
     public float attackCooldown = 0.2f;
 
@@ -33,11 +51,26 @@ public class PlayerWarrior : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Store the initial local position of attack origin
+        if (attackOrigin != null)
+        {
+            attackOriginInitialLocalPos = attackOrigin.localPosition;
+        }
+
+        // Initialize gem counter UI
+        if (totalGems <= 0)
+        {
+            totalGems = GameObject.FindGameObjectsWithTag("Gem").Length;
+        }
+
+        counterText.text = $"Gems: {gemCounter}/{totalGems}";
     }
 
     void Update()
     {
-        if (isDead) return; 
+        if (isDead) return;
 
         move = Input.GetAxis("Horizontal");
 
@@ -45,6 +78,7 @@ public class PlayerWarrior : MonoBehaviour
         Jump();
         Attack();
         HandleAnimation();
+        HandleFootstepSounds();
     }
 
     void FixedUpdate()
@@ -56,17 +90,46 @@ public class PlayerWarrior : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(move * speed, rb.linearVelocity.y);
 
+        // Flip character based on movement direction
         if (move > 0)
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+        {
+            // Face right
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
+            // Update attack origin position when facing right
+            if (attackOrigin != null)
+            {
+                Vector3 newLocalPos = attackOriginInitialLocalPos;
+                newLocalPos.x = Mathf.Abs(attackOriginInitialLocalPos.x);
+                attackOrigin.localPosition = newLocalPos;
+            }
+        }
         else if (move < 0)
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+        {
+            // Face left
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
+            // Update attack origin position when facing left
+            if (attackOrigin != null)
+            {
+                Vector3 newLocalPos = attackOriginInitialLocalPos;
+                newLocalPos.x = -Mathf.Abs(attackOriginInitialLocalPos.x);
+                attackOrigin.localPosition = newLocalPos;
+            }
+        }
     }
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
+            // Play jump sound
+            if (SoundManager.Instance != null)
+            {
+                SoundManager.Instance.PlaySound2D("Player Jump");
+            }
         }
     }
 
@@ -79,6 +142,19 @@ public class PlayerWarrior : MonoBehaviour
         );
     }
 
+    void HandleFootstepSounds()
+    {
+        // Play running sound with cooldown
+        if (Mathf.Abs(move) > 0.1f && isGrounded && Time.time > lastFootstepTime + footstepCooldown)
+        {
+            if (SoundManager.Instance != null)
+            {
+                SoundManager.Instance.PlaySound2D("Player Run");
+            }
+            lastFootstepTime = Time.time;
+        }
+    }
+
     void Attack()
     {
         if (Input.GetKeyDown(KeyCode.E) && canAttack)
@@ -87,7 +163,10 @@ public class PlayerWarrior : MonoBehaviour
 
             canAttack = false;
 
-            anim.SetTrigger("Attack");
+            if (anim != null)
+            {
+                anim.SetTrigger("Attack");
+            }
 
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
                 attackPoint.position,
@@ -137,8 +216,9 @@ public class PlayerWarrior : MonoBehaviour
 
     void HandleAnimation()
     {
-        if (anim == null || isDead) return; 
+        if (anim == null || isDead) return;
 
+        // Use the original parameter names from your first script
         anim.SetFloat("Speed", Mathf.Abs(move));
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("yVelocity", rb.linearVelocity.y);
@@ -150,7 +230,16 @@ public class PlayerWarrior : MonoBehaviour
 
         health -= damage;
 
-        anim.SetTrigger("Hurt");
+        if (anim != null)
+        {
+            anim.SetTrigger("Hurt");
+        }
+
+        // Play hurt sound
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySound2D("Player Hurt");
+        }
 
         Debug.Log("Player HP: " + health);
 
@@ -162,7 +251,10 @@ public class PlayerWarrior : MonoBehaviour
 
     void DisableAnimator()
     {
-        anim.enabled = false;
+        if (anim != null)
+        {
+            anim.enabled = false;
+        }
     }
 
     void Die()
@@ -173,13 +265,20 @@ public class PlayerWarrior : MonoBehaviour
 
         Debug.Log("PLAYER DIED!");
 
+        // Play death sound
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlaySound2D("Player Death");
+        }
+
         rb.linearVelocity = Vector2.zero;
-
         rb.bodyType = RigidbodyType2D.Static;
-
         GetComponent<Collider2D>().enabled = false;
 
-        anim.Play("DeathEffect");
+        if (anim != null)
+        {
+            anim.Play("DeathEffect");
+        }
 
         Destroy(gameObject, 0.3f);
     }
@@ -188,7 +287,24 @@ public class PlayerWarrior : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Lava"))
         {
-            Die(); 
+            Die();
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Gem collection with audio
+        if (collision.CompareTag("Gem") && collision.gameObject.activeSelf == true)
+        {
+            collision.gameObject.SetActive(false);
+            gemCounter += 1;
+            counterText.text = $"Gems: {gemCounter}/{totalGems}";
+
+            // Play gem pickup sound
+            if (SoundManager.Instance != null)
+            {
+                SoundManager.Instance.PlaySound2D("Gem Pickup");
+            }
         }
     }
 
@@ -198,5 +314,12 @@ public class PlayerWarrior : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+
+        // Visualize ground check
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        }
     }
 }

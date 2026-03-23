@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DisplayText
   obj_text: {fileID: 723285465}
-  display: {fileID: 723285465}
+  display: {fileID: 142948100}
 --- !u!4 &17629313
 Transform:
   m_ObjectHideFlags: 0
@@ -4597,6 +4597,8 @@ MonoBehaviour:
   - trackName: Level 1
     audioClip: {fileID: 8300000, guid: 1691c14c63b29714f920645a9ac0468c, type: 3}
   - trackName: Level 2
+    audioClip: {fileID: 8300000, guid: 29ebb8416b4294d43a7e925ff67ce6cd, type: 3}
+  - trackName: Level 3
     audioClip: {fileID: 8300000, guid: 29ebb8416b4294d43a7e925ff67ce6cd, type: 3}
   - trackName: Game Over
     audioClip: {fileID: 0}
