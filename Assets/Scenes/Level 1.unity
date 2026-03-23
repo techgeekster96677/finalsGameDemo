@@ -2764,6 +2764,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1050.9646
       objectReference: {fileID: 0}
+    - target: {fileID: 3372077205737010176, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1649414961532140207, guid: b54af9d30edc77744a838cb0b3aa6031, type: 3}
     - target: {fileID: 3423193151669324268, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2845,6 +2849,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_text
+      value: As you Journeyed... You finally reach the Town of the Forgotten where
+        mysterious things takes place...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_margin.y
+      value: -1.6726379
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -2875,6 +2888,10 @@ PrefabInstance:
     - target: {fileID: 7347613734855739347, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -1209
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720434599915098451, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_text
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 8720434599915098451, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_fontAsset
