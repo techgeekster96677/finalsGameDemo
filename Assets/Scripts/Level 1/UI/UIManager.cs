@@ -97,6 +97,26 @@ public class UIManager : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
     }
 
+
+    // Return to the main menu when the main menu button is clicked
+    public void MainMenu()
+    {
+        Debug.Log("Main Menu button clicked!");
+        Time.timeScale = 1f;
+
+        // Check if LevelManager instance exists
+        if (LevelManager.instance == null)
+        {
+            Debug.LogError("LevelManager.instance is NULL! Make sure LevelManager is in the scene.");
+            return;
+        }
+
+        // Load the main menu scene using LevelManager with transition
+        Debug.Log("Loading Menu scene via LevelManager");
+        LevelManager.instance.LoadScene("Menu", "CrossFade");
+    }
+
+
     // This method will load the next level based on the current scene name
     public void NextLevel()
     {

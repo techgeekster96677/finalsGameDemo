@@ -130,6 +130,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Handle jumping logic
     private void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -137,16 +138,7 @@ public class Player : MonoBehaviour
         SoundManager.Instance.PlaySound2D("Player Jump");
     }
 
-    // Optional: Visualize the ground check in the editor
-    private void OnDrawGizmosSelected()
-    {
-        if (groundCheck != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-        }
-    }
-
+    // Handle gem collection
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Check if the collided object is a gem and is active
