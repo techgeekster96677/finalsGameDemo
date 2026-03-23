@@ -18,8 +18,9 @@ public class PlayerWarrior : MonoBehaviour
     public LayerMask enemyLayer;
     public int attackDamage = 1;
 
-    [Header("Health")]
-    public int health = 3;
+    //[Header("Health")]
+    //public int health = 3;
+    private Health healthScript;
 
     // Add attack origin for directional attacks
     [Header("Attack Origin")]
@@ -52,6 +53,7 @@ public class PlayerWarrior : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        healthScript = GetComponent<Health>();
 
         // Store the initial local position of attack origin
         if (attackOrigin != null)
@@ -228,7 +230,7 @@ public class PlayerWarrior : MonoBehaviour
     {
         if (isDead) return;
 
-        health -= damage;
+        healthScript.TakeDamage(damage);
 
         if (anim != null)
         {
@@ -241,9 +243,9 @@ public class PlayerWarrior : MonoBehaviour
             SoundManager.Instance.PlaySound2D("Player Hurt");
         }
 
-        Debug.Log("Player HP: " + health);
+        Debug.Log("Player HP: " + healthScript.currentHealth);
 
-        if (health <= 0)
+        if (healthScript.currentHealth <= 0)
         {
             Die();
         }
