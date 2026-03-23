@@ -2630,17 +2630,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1025334275022838959, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1069.5342
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025334275022838959, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 183.2547
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025334275022838959, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00001955
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025334275022838959, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.8980103
+      value: -0.0000061989
       objectReference: {fileID: 0}
     - target: {fileID: 2306745069619692721, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -865.5233
+      value: -857.3836
       objectReference: {fileID: 0}
     - target: {fileID: 2306745069619692721, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -978.7966
+      value: -974.7268
       objectReference: {fileID: 0}
+    - target: {fileID: 3372077205737010176, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1649414961532140207, guid: b54af9d30edc77744a838cb0b3aa6031, type: 3}
     - target: {fileID: 3423193151669324268, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2723,7 +2739,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_text
-      value: Woah!!!
+      value: Beyond the portal, the air turns thick with ancient magic... You step
+        into the Mystic Valley, where the vibrant forest whispers secrets and darkness
+        come alive...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_margin.w
+      value: -0.8427124
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_margin.y
+      value: 9.541779
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_margin.z
+      value: 2.3599854
       objectReference: {fileID: 0}
     - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_fontAsset
@@ -2732,6 +2766,10 @@ PrefabInstance:
     - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_fontStyle
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 4792363218656852399, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_sharedMaterial
@@ -2744,6 +2782,10 @@ PrefabInstance:
     - target: {fileID: 4799683404308434892, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_Name
       value: DialogueBox (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720434599915098451, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
+      propertyPath: m_text
+      value: Narrator
       objectReference: {fileID: 0}
     - target: {fileID: 8720434599915098451, guid: c2f2ee6e28eb6824ba8de48e2f255682, type: 3}
       propertyPath: m_fontAsset
