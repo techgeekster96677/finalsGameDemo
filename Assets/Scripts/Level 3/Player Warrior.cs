@@ -168,12 +168,6 @@ public class PlayerWarrior : MonoBehaviour
                 anim.SetTrigger("Attack");
             }
 
-            // Play attack sound
-            if (SoundManager.Instance != null)
-            {
-                SoundManager.Instance.PlaySound2D("Player Attack");
-            }
-
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
                 attackPoint.position,
                 attackRange,

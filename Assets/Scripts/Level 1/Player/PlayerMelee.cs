@@ -23,7 +23,6 @@ public class PlayerMelee : MonoBehaviour
         if (cooldownTimer <= 0 && Input.GetKeyDown(KeyCode.E))
         {
             PerformAttack();
-            SoundManager.Instance.PlaySound2D("Player Attack");
         }
     }
 
