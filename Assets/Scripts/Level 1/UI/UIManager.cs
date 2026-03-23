@@ -45,21 +45,25 @@ public class UIManager : MonoBehaviour
             string levelNumberStr = sceneName.Replace("Level ", "");
             if (int.TryParse(levelNumberStr, out int levelNumber))
             {
+                // Play music for the current level
                 MusicManager.instance.PlayMusic($"Level {levelNumber}");
             }
         }
         else if (sceneName == "Menu")
         {
+            // Play menu music if we're in the menu scene
             MusicManager.instance.PlayMusic("Menu");
         }
     }
 
+    // This method will show the next level UI when the player completes a level
     public void ShowNextLevelUI()
     {
         nextLevelUI.SetActive(true);
         SoundManager.Instance.PlaySound2D("Level Complete");
     }
 
+    // This method will show the game over UI when the player dies
     public void ShowGameOverUI()
     {
         gameoverUI.SetActive(true);
