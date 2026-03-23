@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    public int health = 10;
+    public int health = 1;
 
     private Animator anim;
     private bool isDead = false;
