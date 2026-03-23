@@ -9,30 +9,38 @@ public class DisplayText : MonoBehaviour
     // This input field is where the player types their name
     public TMP_InputField display;
 
+    //  Show a welcome message
+    public TextMeshProUGUI WelcomeText;
+
+    // store the current username so it can be reused in Start() and Create()
+    private string user_name;
+
     // Start is called when the game begins
     void Start()
     {
         // Load the saved name when game starts
-        // PlayerPrefs is like a small storage box that keeps data even after game closes
-        // GetString tries to find a saved name. If none exists, it returns empty string
-        obj_text.text = PlayerPrefs.GetString("user_name", "Player");
+        user_name = PlayerPrefs.GetString("user_name", "Player");
+        obj_text.text = user_name;
+
+        // Update welcome message with the loaded name
+        WelcomeText.text = $"Welcome back, {user_name}!";
     }
 
     // This function runs when player clicks a button (like "Save" or "Submit")
     public void Create()
     {
         // Take what player typed and put it in the text that shows on screen
-        // display.text = what player typed in the input field
-        // obj_text.text = the text that shows on screen
-        obj_text.text = display.text;
+        user_name = display.text;
+        obj_text.text = user_name;
 
-        // STEP 3: Save the name so we can load it next time
-        // "user_name" is like a label for our saved data
-        // We save whatever is now in obj_text.text
-        PlayerPrefs.SetString("user_name", obj_text.text);
+        // Save the name so we can load it next time
+        PlayerPrefs.SetString("user_name", user_name);
 
         // Actually write the data to disk (save it permanently)
         PlayerPrefs.Save();
         Debug.Log("Username saved: " + obj_text.text); // Print to console for confirmation
+
+        // Update welcome message with the new name
+        WelcomeText.text = $"Welcome back, {user_name}!";
     }
 }
