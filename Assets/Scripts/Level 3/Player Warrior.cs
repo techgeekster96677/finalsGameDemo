@@ -267,7 +267,6 @@ public class PlayerWarrior : MonoBehaviour
 
         Debug.Log("PLAYER DIED!");
 
-        // Play death sound
         if (SoundManager.Instance != null)
         {
             SoundManager.Instance.PlaySound2D("Player Death");
@@ -282,7 +281,11 @@ public class PlayerWarrior : MonoBehaviour
             anim.Play("DeathEffect");
         }
 
-        Destroy(gameObject, 0.3f);
+        GameObject gameOver = GameObject.Find("GameOverScreen");
+        if (gameOver != null)
+        {
+            gameOver.SetActive(true);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
