@@ -21,6 +21,7 @@ public class PlayerWarrior : MonoBehaviour
     //[Header("Health")]
     //public int health = 3;
     private Health healthScript;
+    public GameObject gameOverScreen;
 
     // Add attack origin for directional attacks
     [Header("Attack Origin")]
@@ -232,9 +233,16 @@ public class PlayerWarrior : MonoBehaviour
 
         healthScript.TakeDamage(damage);
 
-        if (anim != null)
+        if (healthScript.currentHealth > 0)
         {
-            anim.SetTrigger("Hurt");
+            if (anim != null)
+            {
+                anim.SetTrigger("Hurt");
+            }
+        }
+        else
+        {
+            Die(); 
         }
 
         // Play hurt sound
@@ -267,11 +275,6 @@ public class PlayerWarrior : MonoBehaviour
 
         Debug.Log("PLAYER DIED!");
 
-        if (SoundManager.Instance != null)
-        {
-            SoundManager.Instance.PlaySound2D("Player Death");
-        }
-
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Static;
         GetComponent<Collider2D>().enabled = false;
@@ -281,11 +284,12 @@ public class PlayerWarrior : MonoBehaviour
             anim.Play("DeathEffect");
         }
 
-        GameObject gameOver = GameObject.Find("GameOverScreen");
-        if (gameOver != null)
+        if (gameOverScreen != null)
         {
-            gameOver.SetActive(true);
+            gameOverScreen.SetActive(true);
         }
+
+        Destroy(gameObject, 1f);
     }
 
     void OnCollisionEnter2D(Collision2D col)

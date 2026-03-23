@@ -12349,6 +12349,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   attackDamage: 1
+  gameOverScreen: {fileID: 503853284}
   attackOrigin: {fileID: 793536347}
   footstepCooldown: 0.3
   totalGems: 0
