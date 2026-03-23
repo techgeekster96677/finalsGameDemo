@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    public int health = 1;
+    public int health = 5;
 
     private Animator anim;
     private bool isDead = false;
@@ -30,16 +30,8 @@ public class Boss : MonoBehaviour
         if (health <= 0)
         {
             anim.SetBool("isDead", true);
+            Destroy(gameObject, 2f);
         }
-    }
-
-    void Die()
-    {
-        isDead = true;
-
-        anim.Play("Dead");
-
-        Destroy(gameObject, 2f);
     }
 
     void OnTriggerEnter2D(Collider2D col)
