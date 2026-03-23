@@ -11711,7 +11711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770aea619c20ee845865d5439bedddd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Healthbar
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 779518588}
   totalHealthBar: {fileID: 21582759}
   currentHealthBar: {fileID: 1901915864}
 --- !u!1 &719130353
@@ -12203,6 +12203,7 @@ GameObject:
   - component: {fileID: 779518585}
   - component: {fileID: 779518587}
   - component: {fileID: 779518586}
+  - component: {fileID: 779518588}
   m_Layer: 0
   m_Name: Warrior_Idle_1_0
   m_TagString: Player
@@ -12407,7 +12408,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   attackDamage: 1
-  health: 3
   attackOrigin: {fileID: 793536347}
   footstepCooldown: 0.3
   totalGems: 0
@@ -12445,6 +12445,25 @@ MonoBehaviour:
   attackDamage: 0
   cooldownTime: 0.5
   animator: {fileID: 779518581}
+--- !u!114 &779518588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779518579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e12d47559159c478d79c266fcacc27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  startingHealth: 3
+  invincibilityDuration: 0
+  deathAnimationLength: 1
+  destroyEnemyOnDeath: 1
+  destroyDelay: 2
+  fallDeathY: 0
+  components: []
 --- !u!4 &780842476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5037502869626843199, guid: 900c2a0d068468b47913b586b860e010, type: 3}
