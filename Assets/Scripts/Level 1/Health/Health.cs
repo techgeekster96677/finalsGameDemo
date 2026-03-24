@@ -1,6 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Manages health, damage, death, invincibility frames, and respawn functionality.
+/// Supports both player and enemy entities with configurable death behavior.
+/// </summary>
+/// 
 // Handles health, damage, invincibility (iFrames), death, and respawn
 public class Health : MonoBehaviour
 {
@@ -57,6 +62,15 @@ public class Health : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Applies damage to the entity.
+    /// 
+    /// BEHAVIOR:
+    /// - Prevents damage if already dead or invincible
+    /// - Reduces current health and clamps between 0 and startingHealth
+    /// - Triggers hurt animation and plays sound if health remains
+    /// - Triggers death sequence if health reaches 0
+    /// </summary>
     // Applies damage and handles health reduction
     public void TakeDamage(float damage)
     {
@@ -88,7 +102,15 @@ public class Health : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// Handles death sequence including animation, sound, and component disabling.
+    /// 
+    /// BEHAVIOR:
+    /// - Triggers death animation and sound
+    /// - Disables all components in the components array
+    /// - Waits for death animation to complete
+    /// - Destroys enemy GameObject if configured (players are not destroyed)
+    /// </summary>
     // Handles death behavior using coroutine for timing
     private IEnumerator Die()
     {
@@ -116,6 +138,10 @@ public class Health : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Restores health by the specified amount.
+    /// Health is clamped between 0 and startingHealth.
+    /// </summary>
     // Restores health
     public void Heal(float amount)
     {
@@ -142,6 +168,14 @@ public class Health : MonoBehaviour
             component.enabled = true;
     }
 
+    /// <summary>
+    /// Coroutine that provides temporary invincibility after taking damage.
+    /// 
+    /// BEHAVIOR:
+    /// - Ignores collisions between layers 6 and 7
+    /// - Provides visual feedback by blinking the sprite renderer
+    /// - Restores collision after invincibility duration
+    /// </summary>
     // Handles temporary invincibility with blinking effect
     private IEnumerator Invincibility()
     {
@@ -176,7 +210,10 @@ public class Health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(6, 7, false);
         isInvincible = false;
     }
-
+    /// <summary>
+    /// Resets invincibility and death state when the object is re-enabled.
+    /// Ensures collision layers are properly restored.
+    /// </summary>
     private void OnEnable()
     {
         // Reset states when object is enabled
