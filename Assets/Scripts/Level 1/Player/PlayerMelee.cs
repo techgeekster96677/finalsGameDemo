@@ -1,6 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Handles player melee attack logic with cooldown and animation events.
+/// Uses an attack origin point and radius to detect enemies within range.
+/// </summary>
 public class PlayerMelee : MonoBehaviour
 {
     public Transform attackOrigin;
@@ -12,7 +16,10 @@ public class PlayerMelee : MonoBehaviour
     private float cooldownTimer = 0f;
     [SerializeField] private Animator animator;
 
-    // For debugging - shows attack range in Scene view
+    /// <summary>
+    /// Updates cooldown timer and checks for attack input.
+    /// Attack is triggered when cooldown is ready and E key is pressed.
+    /// </summary>
     private void Update()
     {
         if (cooldownTimer > 0)
@@ -26,6 +33,10 @@ public class PlayerMelee : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Triggers the melee attack animation and resets the cooldown timer.
+    /// Actual damage is applied via animation event to sync with attack animation timing.
+    /// </summary>
     private void PerformAttack()
     {
         if (animator != null)
@@ -35,7 +46,10 @@ public class PlayerMelee : MonoBehaviour
         cooldownTimer = cooldownTime;
     }
 
-    // Called by Animation Event
+    /// <summary>
+    /// Called by Animation Event during the attack animation.
+    /// Detects all enemies within the attack radius and applies damage to them.
+    /// </summary>
     public void DamageEnemiesInRange()
     {
         Debug.Log("Attack event triggered!");
@@ -59,6 +73,10 @@ public class PlayerMelee : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Visualizes the attack radius in the Scene view for debugging.
+    /// Red wire sphere shows the area where enemies will be detected.
+    /// </summary>
     private void OnDrawGizmos()
     {
         if (attackOrigin != null)

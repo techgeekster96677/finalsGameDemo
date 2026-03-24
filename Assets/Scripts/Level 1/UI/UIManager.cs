@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manages UI elements across levels including game over, next level prompts, and scene navigation.
+/// Handles level completion transitions, restart functionality, and music playback per scene.
+/// </summary>
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameoverUI;
@@ -8,12 +12,18 @@ public class UIManager : MonoBehaviour
     [SerializeField] private int totalLevels = 3;
     public static UIManager instance;
 
+    /// <summary>
+    /// Initializes UI elements to hidden state on awake.
+    /// </summary>
     public void Awake()
     {
         gameoverUI.SetActive(false);
         nextLevelUI.SetActive(false);
     }
 
+    /// <summary>
+    /// Plays the appropriate music for the current scene when the UIManager starts.
+    /// </summary>
     private void Start()
     {
         // Play music for the current level when UIManager starts
@@ -30,11 +40,19 @@ public class UIManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    /// <summary>
+    /// Called when a new scene is loaded. Updates music to match the new scene.
+    /// </summary>
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         PlayMusicForCurrentScene();
     }
 
+    /// <summary>
+    /// Plays music based on the current scene name.
+    /// - Level scenes: Plays "Level X" music where X is the level number
+    /// - Menu scene: Plays "Menu" music
+    /// </summary>
     private void PlayMusicForCurrentScene()
     {
         string sceneName = SceneManager.GetActiveScene().name;
@@ -56,21 +74,30 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // This method will show the next level UI when the player completes a level
+    /// <summary>
+    /// Shows the next level UI when the player completes a level.
+    /// Plays level complete sound effect.
+    /// </summary>
     public void ShowNextLevelUI()
     {
         nextLevelUI.SetActive(true);
         SoundManager.Instance.PlaySound2D("Level Complete");
     }
 
-    // This method will show the game over UI when the player dies
+    /// <summary>
+    /// Shows the game over UI when the player dies.
+    /// Plays game over sound effect.
+    /// </summary>
     public void ShowGameOverUI()
     {
         gameoverUI.SetActive(true);
         SoundManager.Instance.PlaySound2D("Game Over");
     }
 
-    // This method will restart the current level when the restart button is clicked
+    /// <summary>
+    /// Restarts the current level using LevelManager for smooth transition.
+    /// Resets time scale to normal before reloading.
+    /// </summary>
     public void Restart()
     {
         Time.timeScale = 1f;
@@ -90,15 +117,20 @@ public class UIManager : MonoBehaviour
         LevelManager.instance.LoadScene(currentSceneName, "CrossFade");
     }
 
-    // This method will quit the game when the quit button is clicked
+    /// <summary>
+    /// Quits the game application.
+    /// In Editor, stops Play Mode instead.
+    /// </summary>
     public void QuitGame()
     {
         Application.Quit();
         UnityEditor.EditorApplication.isPlaying = false;
     }
 
-
-    // Return to the main menu when the main menu button is clicked
+    /// <summary>
+    /// Returns to the main menu using LevelManager for smooth transition.
+    /// Resets time scale before loading.
+    /// </summary>
     public void MainMenu()
     {
         Debug.Log("Main Menu button clicked!");
@@ -116,8 +148,13 @@ public class UIManager : MonoBehaviour
         LevelManager.instance.LoadScene("Menu", "CrossFade");
     }
 
-
-    // This method will load the next level based on the current scene name
+    /// <summary>
+    /// Loads the next level based on the current scene name.
+    /// - Extracts level number from current scene name
+    /// - Calculates next level number
+    /// - Loads next level if within total levels
+    /// - Falls back to Level 2 if parsing fails
+    /// </summary>
     public void NextLevel()
     {
         Time.timeScale = 1f; // Ensure time scale is reset when moving to the next level
@@ -169,8 +206,10 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // This method will load a fallback level (e.g., Level 2)
-    // if we encounter an error determining the next level
+    /// <summary>
+    /// Loads a fallback level (Level 2) if an error occurs while determining the next level.
+    /// Uses LevelManager if available, otherwise falls back to direct scene loading.
+    /// </summary>
     private void LoadFallbackLevel()
     {
         // Load a default level (e.g., Level 2) if we can't determine the next level

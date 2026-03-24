@@ -1,11 +1,21 @@
 using UnityEngine;
 
+/// <summary>
+/// Serializable data structure for mapping track names to AudioClip assets.
+/// Configured in the Unity Inspector to allow designers to assign music tracks.
+/// </summary>
 [System.Serializable]
 public struct MusicTrack
 {
     public string trackName;
     public AudioClip audioClip;
 }
+
+/// <summary>
+/// Repository for music tracks that provides lookup by name.
+/// Decouples MusicManager from direct AudioClip references, allowing
+/// tracks to be managed and swapped in the Inspector without code changes.
+/// </summary>
 public class MusicLibrary : MonoBehaviour
 {
     public MusicTrack[] musicTracks;

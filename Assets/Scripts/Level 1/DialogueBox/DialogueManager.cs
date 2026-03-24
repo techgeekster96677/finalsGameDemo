@@ -4,6 +4,10 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Manages dialogue display with typewriter effect and character portraits.
+/// Implements singleton pattern for global access across scenes.
+/// </summary>
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
@@ -20,6 +24,10 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
+    /// <summary>
+    /// Singleton initialization. Ensures only one instance exists.
+    /// Initializes the queue for dialogue lines.
+    /// </summary>
     private void Awake()
     {
         if (Instance == null)
@@ -28,8 +36,17 @@ public class DialogueManager : MonoBehaviour
         lines = new Queue<DialogueLine>();
     }
 
+    /// <summary>
+    /// Starts a new dialogue sequence.
+    /// 
+    /// BEHAVIOR:
+    /// - Sets isDialogueActive to true
+    /// - Plays "show" animation to display dialogue UI
+    /// - Clears and refills the queue with dialogue lines
+    /// - Begins displaying the first line
+    /// </summary>
     public void StartDialogue(Dialogue dialogue)
-    { 
+    {
         isDialogueActive = true;
 
         animator.Play("show");
@@ -44,6 +61,15 @@ public class DialogueManager : MonoBehaviour
         DisplayNextDialogueLine();
     }
 
+    /// <summary>
+    /// Displays the next line in the dialogue queue.
+    /// If no lines remain, ends the dialogue.
+    /// 
+    /// BEHAVIOR:
+    /// - Updates character icon and name
+    /// - Stops any ongoing typewriter coroutine
+    /// - Starts typing effect for the current line
+    /// </summary>
     public void DisplayNextDialogueLine()
     {
         if (lines.Count == 0)
@@ -62,6 +88,14 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(currentLine));
     }
 
+    /// <summary>
+    /// Coroutine that displays text one character at a time.
+    /// 
+    /// BEHAVIOR:
+    /// - Clears existing text
+    /// - Adds each character sequentially with delay between letters
+    /// - Delay duration is controlled by typingSpeed
+    /// </summary>
     IEnumerator TypeSentence(DialogueLine dialogueLine)
     {
         dialogueArea.text = "";
@@ -72,6 +106,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ends the current dialogue sequence.
+    /// 
+    /// BEHAVIOR:
+    /// - Sets isDialogueActive to false
+    /// - Plays "hide" animation to dismiss dialogue UI
+    /// </summary>
     void EndDialogue()
     {
         isDialogueActive = false;

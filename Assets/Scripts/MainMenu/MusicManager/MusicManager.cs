@@ -1,6 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Manages background music playback with crossfade transitions.
+/// Implements singleton pattern to persist music across scene loads.
+/// </summary>
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager instance;
@@ -16,7 +20,7 @@ public class MusicManager : MonoBehaviour
     {
         // Check if an instance of MusicManager already exists
         if (instance != null)
-                Destroy(gameObject);
+            Destroy(gameObject);
         else
         {
             instance = this;
@@ -27,7 +31,7 @@ public class MusicManager : MonoBehaviour
     // Public method to play music by track name with optional fade duration
     public void PlayMusic(string trackName, float fadeDuration = 0.5f)
     {
-        StartCoroutine(AnimateMusicCrossFade(musicLibrary.GetClipFromName(trackName), fadeDuration));  
+        StartCoroutine(AnimateMusicCrossFade(musicLibrary.GetClipFromName(trackName), fadeDuration));
     }
 
 

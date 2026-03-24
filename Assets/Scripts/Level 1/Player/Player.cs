@@ -2,6 +2,10 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 
+/// <summary>
+/// Controls player movement, jumping, animations, footstep sounds, and gem collection.
+/// Handles character flipping and attack origin positioning based on movement direction.
+/// </summary>
 public class Player : MonoBehaviour
 {
     // Player movement parameters
@@ -30,6 +34,10 @@ public class Player : MonoBehaviour
     public int totalGems = 0; // set per-level in inspector, or leave 0 to auto-count
     public TextMeshProUGUI counterText;
 
+    /// <summary>
+    /// Initializes player components, animator state, and gem counter.
+    /// Stores initial attack origin position for flipping logic.
+    /// </summary>
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -61,6 +69,10 @@ public class Player : MonoBehaviour
         counterText.text = $"Gems: {gemCounter}/{totalGems}";
     }
 
+    /// <summary>
+    /// Handles player input for movement, jumping, and flipping.
+    /// Updates animator parameters and plays footstep sounds with cooldown.
+    /// </summary>
     void Update()
     {
         float moveX = Input.GetAxis("Horizontal");
@@ -110,11 +122,18 @@ public class Player : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Updates grounded state in FixedUpdate for physics consistency.
+    /// </summary>
     void FixedUpdate()
     {
         UpdateGroundedState();
     }
 
+    /// <summary>
+    /// Checks if the player is grounded using a circle cast at the ground check point.
+    /// Updates animator grounded state accordingly.
+    /// </summary>
     private void UpdateGroundedState()
     {
         isGrounded = Physics2D.OverlapCircle(
@@ -130,7 +149,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Handle jumping logic
+    /// <summary>
+    /// Applies jump force, triggers jump animation, and plays jump sound.
+    /// </summary>
     private void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -138,7 +159,10 @@ public class Player : MonoBehaviour
         SoundManager.Instance.PlaySound2D("Player Jump");
     }
 
-    // Handle gem collection
+    /// <summary>
+    /// Handles gem collection when the player enters a gem trigger.
+    /// Deactivates the gem, increments counter, updates UI, and plays pickup sound.
+    /// </summary>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Check if the collided object is a gem and is active
