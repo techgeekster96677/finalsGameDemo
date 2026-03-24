@@ -1,69 +1,87 @@
 using System.Collections;
 using UnityEngine;
 
+// Handles health, damage, invincibility (iFrames), death, and respawn
 public class Health : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField] public float startingHealth;
+
+    // Current health is read-only outside this class
     public float currentHealth { get; private set; }
+
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+
     private bool dead;
     private bool isInvincible = false;
 
     [Header("iFrames")]
+    // Duration of temporary invincibility after taking damage
     [SerializeField] private float invincibilityDuration;
 
     [Header("Death Settings")]
     [SerializeField] private float deathAnimationLength = 1f;
     [SerializeField] private bool destroyEnemyOnDeath = true;
     [SerializeField] private float destroyDelay = 2f;
+
+    // Y position threshold for falling death (for player)
     [SerializeField] private float fallDeathY;
 
     [Header("Components")]
+    // Components to disable when dead (movement, attack, etc.)
     public Behaviour[] components;
 
-    // Reference to check if this is the player
+    // Determines if this object is the player
     private bool isPlayer;
 
     private void Awake()
     {
+        // Initialize health
         currentHealth = startingHealth;
+
+        // Cache components
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Check if this is the player
+        // Check if this object has Player script
         isPlayer = GetComponent<Player>() != null;
     }
+
     private void Update()
     {
-        // Check if this is the player and if they've fallen below the death threshold
+        // If player falls below a certain Y position, trigger death
         if (isPlayer && !dead && transform.position.y < fallDeathY)
         {
             StartCoroutine(Die());
         }
     }
 
+    // Applies damage and handles health reduction
     public void TakeDamage(float damage)
     {
-        // Don't take damage if already dead or invincible
+        // Ignore damage if already dead or currently invincible
         if (dead || isInvincible)
             return;
 
+        // Reduce health but keep within 0 to startingHealth
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
 
         if (currentHealth > 0)
         {
-            //hurt
+            // Play hurt animation and sound
             if (animator != null)
             {
                 animator.SetTrigger("hurt");
                 SoundManager.Instance.PlaySound2D(isPlayer ? "Player Hurt" : "Enemy Hurt");
             }
+
+            // Activate temporary invincibility
             StartCoroutine(Invincibility());
         }
         else
         {
+            // Trigger death if health reaches zero
             if (!dead)
             {
                 StartCoroutine(Die());
@@ -71,11 +89,12 @@ public class Health : MonoBehaviour
         }
     }
 
+    // Handles death behavior using coroutine for timing
     private IEnumerator Die()
     {
         dead = true;
 
-        // Play death animation
+        // Play death animation and sound
         if (animator != null)
         {
             animator.SetTrigger("die");
@@ -83,51 +102,60 @@ public class Health : MonoBehaviour
             Debug.Log($"{gameObject.name}: Death animation triggered");
         }
 
-        // Disable components for all (player/enemy) to prevent further actions
+        // Disable movement, attack, and other behaviors
         foreach (Behaviour component in components)
             component.enabled = false;
 
-        // Wait for death animation to play
+        // Wait for animation to finish
         yield return new WaitForSeconds(deathAnimationLength);
 
-        // Only destroy if this is an enemy and destroyEnemyOnDeath is true
+        // Destroy only enemies (player is handled differently)
         if (!isPlayer && destroyEnemyOnDeath)
         {
             Destroy(gameObject, destroyDelay);
         }
-        // For player, we don't destroy - we might reload scene or show game over
     }
 
+    // Restores health
     public void Heal(float amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, startingHealth);
     }
 
+    // Resets player after death
     public void Respawn()
     {
         dead = false;
 
+        // Restore full health
         Heal(startingHealth);
+
+        // Reset animation state
         animator.ResetTrigger("die");
-        animator.Play("player_idle"); // Ensure we go back to idle state
+        animator.Play("player_idle");
+
+        // Give temporary invincibility after respawn
         StartCoroutine(Invincibility());
 
-        //Re-enable components for all (player/enemy) to prevent further actions
+        // Re-enable disabled components
         foreach (Behaviour component in components)
             component.enabled = true;
     }
 
+    // Handles temporary invincibility with blinking effect
     private IEnumerator Invincibility()
     {
         isInvincible = true;
+
+        // Ignore collisions between specific layers (e.g., player and enemy)
         Physics2D.IgnoreLayerCollision(6, 7, true);
 
-        // Visual feedback with blinking
         if (spriteRenderer != null)
         {
             float blinkInterval = 0.1f;
             float elapsedTime = 0f;
 
+            // Toggle sprite visibility to create blinking effect
             while (elapsedTime < invincibilityDuration)
             {
                 spriteRenderer.enabled = !spriteRenderer.enabled;
@@ -135,32 +163,35 @@ public class Health : MonoBehaviour
                 elapsedTime += blinkInterval;
             }
 
-            // Make sure sprite is visible at the end
+            // Ensure sprite is visible after blinking ends
             spriteRenderer.enabled = true;
         }
         else
         {
-            // If no sprite renderer, just wait the duration
+            // If no sprite renderer, just wait duration
             yield return new WaitForSeconds(invincibilityDuration);
         }
 
+        // Re-enable collisions and allow damage again
         Physics2D.IgnoreLayerCollision(6, 7, false);
         isInvincible = false;
     }
 
     private void OnEnable()
     {
+        // Reset states when object is enabled
         isInvincible = false;
         dead = false;
+
         Physics2D.IgnoreLayerCollision(6, 7, false);
 
-        // Make sure sprite is visible when enabled
         if (spriteRenderer != null)
             spriteRenderer.enabled = true;
     }
 
     private void OnDisable()
     {
+        // Ensure collisions are restored when object is disabled
         Physics2D.IgnoreLayerCollision(6, 7, false);
     }
 }
